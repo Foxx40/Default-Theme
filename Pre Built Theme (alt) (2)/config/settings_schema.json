@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "15.2.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
-    "theme_support_url": "https:\/\/support.shopify.com\/"
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://support.shopify.com/"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -190,7 +190,7 @@
       {
         "type": "font_picker",
         "id": "type_header_font",
-        "default": "assistant_n4",
+        "default": "outfit_n7",
         "label": "t:settings_schema.typography.settings.type_header_font.label",
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
@@ -228,7 +228,7 @@
         "step": 5,
         "unit": "%",
         "label": "t:settings_schema.typography.settings.heading_scale.label",
-        "default": 130
+        "default": 100
       },
       {
         "type": "header",
@@ -237,7 +237,7 @@
       {
         "type": "font_picker",
         "id": "type_body_font",
-        "default": "assistant_n4",
+        "default": "outfit_n4",
         "label": "t:settings_schema.typography.settings.type_body_font.label",
         "info": "t:settings_schema.typography.settings.type_body_font.info"
       },
@@ -395,11 +395,11 @@
         "type": "range",
         "id": "buttons_radius",
         "min": 0,
-        "max": 40,
+        "max": 100,
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 100
       },
       {
         "type": "header",
@@ -444,6 +444,42 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Frostbyte Hover & Glow Tokens"
+      },
+      {
+        "type": "color",
+        "id": "colors_primary_hover",
+        "label": "Primary button hover",
+        "default": "#7E1527"
+      },
+      {
+        "type": "color",
+        "id": "colors_secondary_hover",
+        "label": "Secondary button hover",
+        "default": "#3D6A83"
+      },
+      {
+        "type": "range",
+        "id": "button_primary_glow_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Primary button glow opacity",
+        "default": 35
+      },
+      {
+        "type": "range",
+        "id": "button_secondary_glow_opacity",
+        "min": 0,
+        "max": 100,
+        "step": 5,
+        "unit": "%",
+        "label": "Secondary button glow opacity",
+        "default": 25
       }
     ]
   },
@@ -482,11 +518,11 @@
         "type": "range",
         "id": "variant_pills_radius",
         "min": 0,
-        "max": 40,
+        "max": 100,
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 40
+        "default": 100
       },
       {
         "type": "header",
@@ -569,7 +605,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 8
       },
       {
         "type": "header",
@@ -748,7 +784,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 14
       },
       {
         "type": "header",
@@ -793,6 +829,22 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Frostbyte Card Hover & Rating Tokens"
+      },
+      {
+        "type": "color",
+        "id": "card_surface_hover_color",
+        "label": "Card surface hover",
+        "default": "#DEE2E6"
+      },
+      {
+        "type": "color",
+        "id": "star_rating_color",
+        "label": "Star rating gold color",
+        "default": "#F59E0B"
       }
     ]
   },
@@ -905,7 +957,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 14
       },
       {
         "type": "header",
@@ -1062,7 +1114,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 14
       },
       {
         "type": "header",
@@ -1228,7 +1280,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 14
       },
       {
         "type": "header",
@@ -1315,7 +1367,7 @@
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 0
+        "default": 20
       },
       {
         "type": "header",
@@ -1433,6 +1485,20 @@
         "unit": "px",
         "label": "t:settings_schema.global.settings.blur.label",
         "default": 0
+      },
+      {
+        "type": "header",
+        "content": "Frostbyte Drawer Radius"
+      },
+      {
+        "type": "range",
+        "id": "drawer_corner_radius",
+        "min": 0,
+        "max": 40,
+        "step": 2,
+        "unit": "px",
+        "label": "Drawer corner radius",
+        "default": 20
       }
     ]
   },
@@ -1467,11 +1533,11 @@
         "type": "range",
         "id": "badge_corner_radius",
         "min": 0,
-        "max": 40,
+        "max": 100,
         "step": 2,
         "unit": "px",
         "label": "t:settings_schema.global.settings.corner_radius.label",
-        "default": 40
+        "default": 100
       },
       {
         "type": "select",
@@ -1521,6 +1587,22 @@
         ],
         "default": "inverse",
         "label": "t:settings_schema.badges.settings.sold_out_badge_color_scheme.label"
+      },
+      {
+        "type": "header",
+        "content": "Frostbyte Guarantee Badges"
+      },
+      {
+        "type": "color",
+        "id": "badge_success_color",
+        "label": "Guarantee / in-stock badge color",
+        "default": "#10B981"
+      },
+      {
+        "type": "color",
+        "id": "badge_success_bg_color",
+        "label": "Guarantee / in-stock background color",
+        "default": "#E6F9F2"
       }
     ]
   },
@@ -1803,7 +1885,7 @@
           }
         ],
         "default": "classic",
-        "info": "Example for Classic: Color: Green, Size: S. Example for compact: Green \/ S"
+        "info": "Example for Classic: Color: Green, Size: S. Example for compact: Green / S"
       },
       {
         "type": "checkbox",
@@ -1865,7 +1947,7 @@
       },
       {
         "type": "paragraph",
-        "content": "Use the cart progress bar for shipping or other cart promotions. The progress bar will show a success message once the customer reaches the set goal. Make sure to set up an [automatic discount](https:\/\/help.shopify.com\/en\/manual\/discounts\/automatic-discounts)."
+        "content": "Use the cart progress bar for shipping or other cart promotions. The progress bar will show a success message once the customer reaches the set goal. Make sure to set up an [automatic discount](https://help.shopify.com/en/manual/discounts/automatic-discounts)."
       },
       {
         "type": "checkbox",
@@ -2135,7 +2217,7 @@
         "type": "richtext",
         "id": "cart_upsell_1_desc",
         "label": "Upsell #1 Description",
-        "default": "<p>Write a short description about your upsell product to attract customers<\/p>"
+        "default": "<p>Write a short description about your upsell product to attract customers</p>"
       },
       {
         "type": "text",

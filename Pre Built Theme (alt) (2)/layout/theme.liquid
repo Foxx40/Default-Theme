@@ -240,6 +240,51 @@
         --variant-pills-shadow-horizontal-offset: {{ settings.variant_pills_shadow_horizontal_offset }}px;
         --variant-pills-shadow-vertical-offset: {{ settings.variant_pills_shadow_vertical_offset }}px;
         --variant-pills-shadow-blur-radius: {{ settings.variant_pills_shadow_blur }}px;
+
+        /* Frostbyte Design Tokens */
+        --color-primary: {{ settings.colors_accent_1 | default: '#9B1B30' }};
+        --color-primary-hover: {{ settings.colors_primary_hover | default: '#7E1527' }};
+        --color-primary-glow: rgba({{ settings.colors_accent_1.red | default: 155 }}, {{ settings.colors_accent_1.green | default: 27 }}, {{ settings.colors_accent_1.blue | default: 48 }}, {{ settings.button_primary_glow_opacity | divided_by: 100.0 | default: 0.35 }});
+
+        --color-secondary: {{ settings.colors_accent_2 | default: '#2B4C5E' }};
+        --color-secondary-light: {{ settings.colors_secondary_hover | default: '#3D6A83' }};
+        --color-secondary-glow: rgba({{ settings.colors_accent_2.red | default: 43 }}, {{ settings.colors_accent_2.green | default: 76 }}, {{ settings.colors_accent_2.blue | default: 94 }}, {{ settings.button_secondary_glow_opacity | divided_by: 100.0 | default: 0.25 }});
+
+        --color-bg-canvas: {{ settings.colors_background_1 | default: '#F8F9FA' }};
+        --color-surface: {{ settings.colors_background_2 | default: '#E9ECEF' }};
+        --color-surface-hover: {{ settings.card_surface_hover_color | default: '#DEE2E6' }};
+        --color-surface-white: #FFFFFF;
+
+        --color-text-main: {{ settings.colors_text | default: '#1E293B' }};
+        --color-text-muted: #64748B;
+        --color-text-light: #94A3B8;
+
+        --color-border: rgba({{ settings.colors_accent_2.red | default: 43 }}, {{ settings.colors_accent_2.green | default: 76 }}, {{ settings.colors_accent_2.blue | default: 94 }}, 0.15);
+        --color-border-subtle: rgba(226, 232, 240, 0.8);
+
+        --color-gold: {{ settings.star_rating_color | default: '#F59E0B' }};
+        --color-success: {{ settings.badge_success_color | default: '#10B981' }};
+        --color-success-bg: {{ settings.badge_success_bg_color | default: 'rgba(16, 185, 129, 0.12)' }};
+
+        --radius-sm: 8px;
+        --radius-md: {{ settings.card_corner_radius | default: 14 }}px;
+        --radius-lg: {{ settings.popup_corner_radius | default: 20 }}px;
+        --radius-pill: 9999px;
+
+        --drawer-radius: {{ settings.drawer_corner_radius | default: 20 }}px;
+
+        --shadow-sm: 0 2px 8px rgba(30, 41, 59, 0.05);
+        --shadow-md: 0 8px 24px rgba(30, 41, 59, 0.08);
+        --shadow-lg: 0 16px 36px rgba(30, 41, 59, 0.12);
+        --shadow-glow-primary: 0 8px 20px var(--color-primary-glow);
+        --shadow-glow-secondary: 0 8px 20px var(--color-secondary-glow);
+
+        --font-mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+        --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+        --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+        --transition-fast: 0.18s cubic-bezier(0.2, 0, 0, 1);
+        --transition-normal: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
       }
 
       *,
@@ -276,6 +321,7 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'component-frostbyte-tokens.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
